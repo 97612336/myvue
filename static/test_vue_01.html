@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+
+<div id="vue_det">
+  <h1>site : {{site}}</h1>
+  <h1>url : {{url}}</h1>
+  <h1>{{details()}}</h1>
+</div>
+
+<div id="new_el" style="color:red;">
+  <h3>new_ele:{{els}}</h3>
+</div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#vue_det',
+        data: {
+            site: "哈哈",
+            url: "www.bigbiy.com",
+            alexa: "10000"
+        },
+        methods: {
+            details: function() {
+                return  this.site + " - 厉害啊！";
+            }
+        }
+    })
+
+    var new_el =new Vue({
+        el:'#new_el',
+        data:{
+          els:"这是新元素"
+        }
+
+    })
+
+
+</script>
+
+</body>
+</html>
